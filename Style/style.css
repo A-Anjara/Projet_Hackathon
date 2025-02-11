@@ -1,4 +1,4 @@
-/* Styles généraux */
+
 body {
     
     font-family: Arial, sans-serif;
@@ -8,7 +8,7 @@ body {
     color: #008000;
 }
 
-/* Header */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -41,7 +41,7 @@ nav a {
     cursor: pointer;
 }
 
-/* Section principale */
+
 .hero {
     max-width : 100%;
     display: flex  ;
