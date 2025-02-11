@@ -1,0 +1,157 @@
+.section-2{
+    @include flex($justify:space-evenly);
+    @include spacing($padding:25px);
+    .section-2-1{
+        width:50%;
+        @include flex($direction:column,$gap:10px);
+        position:relative;
+        .meteo{
+            @include spacing(0,5%);
+            @include text($size:1.75em,$lh:1.25em);
+            position:relative;
+            .tomorrow{
+                @include spacing(50px 0px 10px,10px);
+                @include border(-1,15px);
+                @include text($size:1.25em,$color:white);
+                @include block($bg:$bg-primary,$width:65%);
+                @include flex($justify:space-between,$align:center);
+                .day{
+                    @include text($size:0.75em);
+                }
+                .next-weather-image{
+                    @include block($width:60px,$height:60px);
+                    img{
+                        @include block($width:100%,$height:100%);
+                    }
+                }
+            }
+            .weather-image{
+                position:absolute;
+                @include block(block,200px,200px,-1,-1);
+                top:-10px;
+                right:-10px;
+                img{
+                    @include block(block,100%,100%);
+                }
+            }
+        }
+        .time{
+            position:absolute;
+            bottom:0;
+            right:0;
+            @include spacing(0,10px);
+            @include text($size:0.9em,$shadow:0px 0px 2px);
+        }
+        .calendar{
+            @include spacing(0,5%);
+            .up{
+                @include text($size:2em);
+                @include flex($justify:space-between,$align:center);
+                .moves{
+                    flex-grow: 1;
+                    @include text($size:1.5em,$shadow:0px 0px 2px rgb(10,10,10));
+                    @include flex($justify:center,$gap:40px);
+                    *:hover{
+                        cursor:pointer;
+                        transform: scale(1.1,1.1);
+                    }
+                }
+            }
+            .option{
+                @include text($size:1.25em,$align:center);
+                @include block($width:90%,$bg:$bg-secondary);
+                @include spacing(10px auto);
+                @include flex();
+                @include border($radius:15px);
+                div{
+                    flex-grow: 1;
+                    @include block($bg:rgba(255,0,0,0));
+                    @include border($radius:15px);
+                    @include spacing($padding:5px 0px);
+                    &:hover{
+                        cursor:pointer;
+                        @include block($bg: rgb(100,150,100));
+                        @include text(white);
+                    }
+                }
+                [active]{
+                    @include block($bg:$bg-primary);
+                    @include text(white,$shadow:0px 0px 2px);
+                }
+            }
+            .day-calendar{
+                @include text($size:0.9em,$align:center);
+                @include block($width:75%);
+                @include flex($justify:space-between,$wrap:wrap);
+                @include spacing(auto);
+                div{
+                    @include block($width:100%/7);
+                }
+            }
+        }
+    }
+
+    .meteo,.calendar,.section-2-2{
+        @include block($shadow:2px 2px 25px rgba(20,20,20,0.5));
+        @include border(-1,15px);
+    }
+
+    .section-2-2{
+        @include block($width:25%);
+        @include spacing($padding:15px);
+        .agenda{
+            @include flex($align:center);
+            .agenda-title{
+                flex-grow: 1;
+                @include text($size:1.5em,$shadow:0 0 2px);
+            }
+            i{
+                display: block;
+                @include text(rgb(105,125,105),$size:1.1em);
+            }
+            .agenda-more{
+                @include text(white,$size:1.5em,$lh:auto,$shadow:0 0 2px white);
+                @include block($bg:$bg-primary);
+                @include spacing(0 0 0 25px,$padding:5px 10px);
+                // @include border(-1,50%);
+                clip-path: circle(40% at 50% 55%);
+                transition:clip-path 1s;
+                &:hover{
+                    cursor:pointer;
+                    clip-path: circle(30% at 50% 55%);
+                }
+            }
+        }
+    }
+    .daily{
+        @include text(rgb(150,150,150));
+        .day-card{
+            &-day{
+                @include spacing(15px 5px 10px);
+                @include text($size:1.25em,$shadow:0 0 2px);
+            }
+            &-label{
+                @include flex($align:flex-start,$gap:5px);
+                @include spacing(10px 0px);
+                .dot{
+                    min-height: 10px;
+                    max-height: 10px;
+                    min-width:10px;
+                    max-width:10px;
+                    position:relative;
+                    top:7px;
+                    @include block(block,$width:15px,$height:15px,$bg:$bg-primary);
+                    @include border(-1,50%);
+                    
+                }
+                .day-card-text-label{
+                    @include text(black,$shadow:0 0 1px black);
+                    @include block(inline-block);
+                }
+                .day-card-text-text{
+                    display:inline;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,221 @@
+root {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.section-2 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: -1;
+  padding: 25px;
+}
+.section-2 .section-2-1 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: -1;
+  gap: 10px;
+  position: relative;
+}
+.section-2 .section-2-1 .meteo {
+  margin: 0;
+  padding: 5%;
+  font-size: 1.75em;
+  line-height: 1.6625em;
+  line-height: 1.25em;
+  position: relative;
+}
+.section-2 .section-2-1 .meteo .tomorrow {
+  margin: 50px 0px 10px;
+  padding: 10px;
+  border-radius: 15px;
+  color: white;
+  font-size: 1.25em;
+  line-height: 1.1875em;
+  width: 65%;
+  background-color: #22BA00;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: -1;
+}
+.section-2 .section-2-1 .meteo .tomorrow .day {
+  font-size: 0.75em;
+  line-height: 0.7125em;
+}
+.section-2 .section-2-1 .meteo .tomorrow .next-weather-image {
+  width: 60px;
+  height: height;
+}
+.section-2 .section-2-1 .meteo .tomorrow .next-weather-image img {
+  width: 100%;
+  height: height;
+}
+.section-2 .section-2-1 .meteo .weather-image {
+  position: absolute;
+  display: block;
+  width: 200px;
+  height: height;
+  top: -10px;
+  right: -10px;
+}
+.section-2 .section-2-1 .meteo .weather-image img {
+  display: block;
+  width: 100%;
+  height: height;
+}
+.section-2 .section-2-1 .time {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  padding: 10px;
+  font-size: 0.9em;
+  line-height: 0.855em;
+  text-shadow: 0px 0px 2px;
+}
+.section-2 .section-2-1 .calendar {
+  margin: 0;
+  padding: 5%;
+}
+.section-2 .section-2-1 .calendar .up {
+  font-size: 2em;
+  line-height: 1.9em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: -1;
+}
+.section-2 .section-2-1 .calendar .up .moves {
+  flex-grow: 1;
+  font-size: 1.5em;
+  line-height: 1.425em;
+  text-shadow: 0px 0px 2px rgb(10, 10, 10);
+  display: flex;
+  justify-content: center;
+  flex-wrap: -1;
+  gap: 40px;
+}
+.section-2 .section-2-1 .calendar .up .moves *:hover {
+  cursor: pointer;
+  transform: scale(1.1, 1.1);
+}
+.section-2 .section-2-1 .calendar .option {
+  font-size: 1.25em;
+  line-height: 1.1875em;
+  text-align: center;
+  width: 90%;
+  background-color: #D9D9D9;
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: -1;
+  border-radius: 15px;
+}
+.section-2 .section-2-1 .calendar .option div {
+  flex-grow: 1;
+  background-color: rgba(255, 0, 0, 0);
+  border-radius: 15px;
+  padding: 5px 0px;
+}
+.section-2 .section-2-1 .calendar .option div:hover {
+  cursor: pointer;
+  background-color: rgb(100, 150, 100);
+  color: white;
+}
+.section-2 .section-2-1 .calendar .option [active] {
+  background-color: #22BA00;
+  color: white;
+  text-shadow: 0px 0px 2px;
+}
+.section-2 .section-2-1 .calendar .day-calendar {
+  font-size: 0.9em;
+  line-height: 0.855em;
+  text-align: center;
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: auto;
+}
+.section-2 .section-2-1 .calendar .day-calendar div {
+  width: 14.2857142857%;
+}
+.section-2 .meteo, .section-2 .calendar, .section-2 .section-2-2 {
+  box-shadow: 2px 2px 25px rgba(20, 20, 20, 0.5);
+  border-radius: 15px;
+}
+.section-2 .section-2-2 {
+  width: 25%;
+  padding: 15px;
+}
+.section-2 .section-2-2 .agenda {
+  display: flex;
+  align-items: center;
+  flex-wrap: -1;
+}
+.section-2 .section-2-2 .agenda .agenda-title {
+  flex-grow: 1;
+  font-size: 1.5em;
+  line-height: 1.425em;
+  text-shadow: 0 0 2px;
+}
+.section-2 .section-2-2 .agenda i {
+  display: block;
+  color: rgb(105, 125, 105);
+  font-size: 1.1em;
+  line-height: 1.045em;
+}
+.section-2 .section-2-2 .agenda .agenda-more {
+  color: white;
+  font-size: 1.5em;
+  line-height: 1.425em;
+  text-shadow: 0 0 2px white;
+  line-height: auto;
+  background-color: #22BA00;
+  margin: 0 0 0 25px;
+  padding: 5px 10px;
+  clip-path: circle(40% at 50% 55%);
+  transition: clip-path 1s;
+}
+.section-2 .section-2-2 .agenda .agenda-more:hover {
+  cursor: pointer;
+  clip-path: circle(30% at 50% 55%);
+}
+.section-2 .daily {
+  color: rgb(150, 150, 150);
+}
+.section-2 .daily .day-card-day {
+  margin: 15px 5px 10px;
+  font-size: 1.25em;
+  line-height: 1.1875em;
+  text-shadow: 0 0 2px;
+}
+.section-2 .daily .day-card-label {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: -1;
+  gap: 5px;
+  margin: 10px 0px;
+}
+.section-2 .daily .day-card-label .dot {
+  min-height: 10px;
+  max-height: 10px;
+  min-width: 10px;
+  max-width: 10px;
+  position: relative;
+  top: 7px;
+  display: block;
+  width: 15px;
+  height: height;
+  background-color: #22BA00;
+  border-radius: 50%;
+}
+.section-2 .daily .day-card-label .day-card-text-label {
+  color: black;
+  text-shadow: 0 0 1px black;
+  display: inline-block;
+}
+.section-2 .daily .day-card-label .day-card-text-text {
+  display: inline;
+}
+
+/*# sourceMappingURL=style.css.map */

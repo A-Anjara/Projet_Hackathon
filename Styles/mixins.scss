@@ -1,0 +1,105 @@
+@mixin respond($breakpoint){
+    @if($breakpoint != -1){
+        @media screen and (min-width:$breakpoint){
+            @content;
+        }
+    }
+    @else{
+        @content;
+    }
+}
+@mixin flex($flex:flex,$direction:-1,$align:-1,$justify:-1,$wrap:-1,$gap:-1,$breakpoint:-1){
+    @include respond($breakpoint){
+        @if($flex != -1){
+            display: $flex;
+        }
+        @if($direction != -1){
+            flex-direction: $direction;
+        }
+        @if($align != -1){
+            align-items: $align;
+        }
+        @if($justify != -1){
+            justify-content: $justify;
+        }
+        @if($wrap){
+            flex-wrap: $wrap;
+        }
+        @if($gap != -1){
+            gap: $gap;
+        }
+    }
+}
+@mixin spacing($margin:-1,$padding:-1,$breakpoint:-1){
+    @include respond($breakpoint){
+        @if($margin != -1){
+            margin:$margin;
+        }
+        @if($padding != -1){
+            padding:$padding;
+        }
+    }
+}
+@mixin border($border:-1,$radius:-1,$breakpoint:-1){
+    @include respond($breakpoint){
+        @if($border != -1){
+            border:$border;
+        }
+        @if($radius != -1){
+            border-radius: $radius;
+        }
+    }
+}
+@mixin show($subject,$method,$off,$on,$animate:-1){
+    #{$subject}{
+        #{$method}:$off;
+        @if($animate != -1){
+            transition: #{$method} 1s;
+        }
+    }
+    &:hover{
+        cursor: pointer;
+        #{$subject}{
+            #{$method}:$on;
+        }
+    }
+}
+@mixin block($display:-1,$width:-1,$height:-1,$bg:-1,$shadow :-1,$breakpoint:-1){
+    @include respond($breakpoint){
+        @if($display != -1){
+            display:$display;
+        }
+        @if($width != -1){
+            width:$width;
+        }
+        @if($height != -1){
+            height:height;
+        }
+        @if($bg != -1){
+            background-color: $bg;
+        }
+        @if($shadow != -1){
+            box-shadow: $shadow;
+        }
+    }
+}
+@mixin text($color:-1,$size:-1,$lh:-1,$align: -1,$shadow : -1,$breakpoint : -1){
+    @include respond($breakpoint){
+        @if($color != -1){
+            color:$color;
+        }
+        @if($size != -1){
+            font-size:$size;
+            line-height: $size*0.95;
+        }
+        @if($shadow != -1){
+            text-shadow:$shadow;
+        }
+        @if($align != -1){
+            text-align: $align;
+        }
+        @if($lh != -1){
+            line-height: $lh;
+        }
+    }
+}
