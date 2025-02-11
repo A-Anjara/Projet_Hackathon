@@ -10,7 +10,7 @@
             @include text($size:1.75em,$lh:1.25em);
             position:relative;
             .tomorrow{
-                @include spacing(50px 0px 10px,10px);
+                @include spacing(50px 0px 10px,10px 15px);
                 @include border(-1,15px);
                 @include text($size:1.25em,$color:white);
                 @include block($bg:$bg-primary,$width:65%);

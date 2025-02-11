@@ -26,13 +26,14 @@ root {
 }
 .section-2 .section-2-1 .meteo .tomorrow {
   margin: 50px 0px 10px;
-  padding: 10px;
+  padding: 10px 10px;
   border-radius: 15px;
   color: white;
   font-size: 1.25em;
   line-height: 1.1875em;
   width: 65%;
-  background-color: #22BA00;
+  /* background-color: #22BA00; */
+  background-color: red;
   display: flex;
   align-items: center;
   justify-content: space-between;
