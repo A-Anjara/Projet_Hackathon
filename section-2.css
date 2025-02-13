@@ -1,0 +1,27 @@
+root {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.body {
+  display: flex;
+  flex-wrap: -1;
+}
+
+.sidenav {
+  display: block;
+  width: fit-content;
+  height: auto;
+  padding: 25px;
+}
+
+.profil {
+  display: block;
+  width: fit-content;
+  height: auto;
+}
+
+/*# sourceMappingURL=section-2.css.map */

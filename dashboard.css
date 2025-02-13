@@ -1,0 +1,338 @@
+:root {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  cursor: pointer;
+}
+
+.body {
+  display: flex;
+  overflow: hidden;
+}
+
+.toggler {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  z-index: 15;
+}
+@media screen and (min-width: 492px) {
+  .toggler {
+    display: none;
+  }
+}
+.toggler img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgb(200, 255, 200);
+  border-radius: 50%;
+}
+.toggler:active {
+  transform: scale(0.9, 0.9);
+}
+
+.sidenav {
+  color: white;
+  font-size: 0.9em;
+  line-height: 0.855em;
+  text-align: center;
+  line-height: 1em;
+  display: none;
+  height: 100vh;
+  background-color: #22BA00;
+  min-width: 100vw;
+  z-index: 10;
+  position: sticky;
+  top: 0;
+  border-top-left-radius: 1px;
+  border-bottom-left-radius: 1px;
+}
+.sidenav .close {
+  position: sticky;
+  top: 10px;
+  left: 10px;
+  width: fit-content;
+  color: rgb(175, 250, 175);
+  font-size: 1.25em;
+  line-height: 1.1875em;
+  font-weight: bolder;
+}
+@media screen and (min-width: 492px) {
+  .sidenav .close {
+    display: none;
+  }
+}
+@media screen and (min-width: 492px) {
+  .sidenav {
+    height: auto;
+  }
+}
+@media screen and (min-width: 492px) {
+  .sidenav {
+    display: block;
+    min-width: 175px;
+  }
+}
+@media screen and (min-width: 696px) {
+  .sidenav {
+    min-width: 250px;
+    font-size: 1.1em;
+    line-height: 1.045em;
+  }
+}
+
+.profil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profil-image {
+  width: 100px;
+  height: fit-content;
+}
+.profil-image img {
+  border: 3px solid white;
+  border-radius: 60%;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 696px) {
+  .browse {
+    padding: 0px 0px 0px 15px;
+  }
+}
+.browse a {
+  display: block;
+  color: white;
+  text-align: center;
+  margin: 25px 0;
+  padding: 5px;
+  border-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.browse a:hover {
+  font-weight: bolder;
+}
+.browse a[current] {
+  background-color: white;
+  color: #22BA00;
+  font-weight: bolder;
+}
+.browse a:last-child {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.browse a:last-child img {
+  display: block;
+  width: 25px;
+  height: 25px;
+}
+@media screen and (min-width: 492px) {
+  .browse a:last-child {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.product {
+  font-size: 0.8em;
+  line-height: 0.76em;
+  line-height: 1em;
+  display: flex;
+  align-items: stretch;
+  gap: 15px;
+  padding: 5px 10px 5px 10px;
+  background-color: white;
+  box-shadow: 2px 2px 10px rgba(50, 50, 50, 0.5);
+  border-radius: 15px;
+}
+@media screen and (min-width: 696px) {
+  .product {
+    font-size: 1em;
+    line-height: 0.95em;
+    line-height: 1.2em;
+  }
+}
+@media screen and (min-width: 696px) {
+  .product {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1050px) {
+  .product {
+    width: auto;
+  }
+}
+.product.current {
+  background-color: #22BA00;
+  color: white;
+}
+.product.current .product-button {
+  display: none;
+}
+.product-button {
+  width: fit-content;
+  background-color: #22BA00;
+  color: white;
+  margin: 10px 0px;
+  padding: 5px 25px;
+  border-radius: 15px;
+}
+.product-button:hover {
+  cursor: pointer;
+  background-color: rgb(24.6774193548, 135, 0);
+}
+.product-label {
+  font-size: 1.5em;
+  line-height: 1.425em;
+}
+.product-right {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.product-right img {
+  width: 100%;
+  height: 100%;
+  margin-top: -15px;
+}
+
+.main {
+  width: 100%;
+  padding: 10px 0;
+}
+
+.top-product {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+@media screen and (min-width: 1050px) {
+  .top-product {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-evenly;
+    gap: 0px;
+  }
+}
+
+.product-info {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: white;
+  box-shadow: 2px 2px 10px rgba(50, 50, 50, 0.5);
+  border-radius: 15px;
+  margin: 50px auto;
+  padding: 25px 25px;
+  color: rgb(25, 50, 25);
+  font-size: 0.9em;
+  line-height: 0.855em;
+  position: relative;
+}
+@media screen and (min-width: 696px) {
+  .product-info {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 696px) {
+  .product-info {
+    padding: 25px 50px;
+  }
+}
+@media screen and (min-width: 1050px) {
+  .product-info {
+    padding: 25px 100px;
+  }
+}
+.product-info-background {
+  position: absolute;
+  top: -15%;
+  right: -20%;
+  transform: rotate(25deg);
+  z-index: -1;
+  display: block;
+  width: 30%;
+}
+.product-info-background img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.product-info-title {
+  font-size: 2.5em;
+  line-height: 2.375em;
+  line-height: 1.5em;
+  font-weight: bolder;
+}
+.product-info-start {
+  font-size: 1.25em;
+  line-height: 1.1875em;
+  line-height: 1.25em;
+}
+.product-info .line {
+  margin: 50px 0px 5px 0px;
+}
+.product-info-notification-header {
+  font-weight: bolder;
+  font-size: 1.5em;
+  line-height: 1.425em;
+}
+.product-info-notification-text {
+  margin: 10px 0px;
+  font-size: 1.05em;
+  line-height: 0.9975em;
+  line-height: 1.5em;
+  position: relative;
+}
+.product-info-notification-text ::before {
+  content: "";
+  min-width: 20px;
+  min-height: 25px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #22BA00;
+  position: absolute;
+  left: -25px;
+  right: 0;
+  clip-path: circle(25% at 75% 50%);
+}
+.product-info-delete {
+  display: block;
+  width: fit-content;
+  background-color: red;
+  margin: 10px 0px;
+  padding: 10px 15px;
+  color: white;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(25, 25, 25);
+}
+
+/*# sourceMappingURL=dashboard.css.map */

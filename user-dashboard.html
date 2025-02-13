@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="dashboard.css" type="text/css">
+    </head>
+    <body>
+        <div class="body">
+            <div class="toggler" onclick="show('sidenav');show('toggler');">
+                <img src="Images/Pdp.png" alt="">
+            </div>
+            <div class="sidenav" id="df">
+                <div class="close" onclick="show('sidenav');show('toggler');">X</div>
+                <div class="profil">
+                    <div class="profil-image">
+                        <img src="Images/Pdp.png" alt="">
+                    </div>
+                    <div class="profil-name">
+                        ALEXIA R.
+                    </div>
+                </div>
+                <div class="browse">
+                    <a href="#" current>Dashboard</a>
+                    <a href="#">Produits</a>
+                    <a href="#">Gestion des produits</a>
+                    <a href="#"><img src="Images/deconnect.png" alt=""><span>Deconnexion</span></a>
+                </div>
+        </div>
+
+        <div class="main">
+            <div class="top-product">
+                <div class="product current">
+                    <div class="product-left">
+                        <div class="product-label">
+                            Tomates
+                        </div>
+                        <div class="begin">
+                            Debut: 10 Janvier 2025
+                        </div>
+                        <div class="product-button">
+                            Voir
+                        </div>
+                    </div>
+                    <div class="product-right">
+                        <img src="Images/Tomate.png" alt="">
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-left">
+                        <div class="product-label">
+                            Riz
+                        </div>
+                        <div class="begin">
+                            Debut: 10 Février 2025
+                        </div>
+                        <div class="product-button">
+                            Voir
+                        </div>
+                    </div>
+                    <div class="product-right">
+                        <img src="Images/Riz.png" alt="">
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-left">
+                        <div class="product-label">
+                            Pomme de Terre 
+                        </div>
+                        <div class="begin">
+                            Debut: 07 Novembre 2024
+                        </div>
+                        <div class="product-button">
+                            Voir
+                        </div>
+                    </div>
+                    <div class="product-right">
+                        <img src="Images/Patate.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="product-info">
+                <div class="product-info-background">
+                    <img src="Images/Tomate.png" alt="">
+                </div>
+                <div class="product-info-title">
+                    TOMATES
+                </div>
+                <div class="product-info-start">
+                    <b>Debut:</b> 10 Janvier 2025
+                </div>
+                <div class="line"></div>
+                <div class="product-info-notification">
+                    <div class="product-info-notification-header">
+                        Notification Pour Aujourd'hui
+                    </div>
+                    <div class="product-info-notification-text">
+                        <div class="dot"></div>
+                        Chaleur Excessive, Prévoyez un arrosage supplémentaire
+                    </div>
+                    <div class="product-info-notification-text">
+                        <div class="dot"></div>
+                        Vos plantes ont besoin d'eau
+                    </div>
+                    <div class="product-info-notification-text">
+                        <div class="dot"></div>
+                        Risque de mildiou avec l'humidité , appliquez un traitement préventif.
+                    </div>
+                    <div class="product-info-notification-text">
+                        <div class="dot"></div>
+                        Vos tomates rougissent, récoltez dans 15 jours
+                    </div>
+                </div>
+                <div class="product-info-delete">
+                    Supprimer
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="function.js"></script>
+</body>
+</html>
