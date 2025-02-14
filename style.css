@@ -1,148 +1,373 @@
+/* card */
+
 *{
-    padding: 0;
-    margin: 0;
-    font-family: 'mulish', sans-serif;
-    text-decoration: none;
+    font-family: 'Mulish', sans-serif;
     font-size: 100%;
+    text-decoration: none;
+    /* padding: 0;
+    margin: 0; */
 }
 
-.sectionProduits{
-    display: flex;
-    box-sizing: border-box;
+.container{
+    position: relative;
 }
 
-.colRight{
-    width: 40%;
+/* .row{
     padding: 2%;
-}
-
-.colLeft{
-    /* width: 75%; */
+    display: inline-flex;
+    position: relative; */
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr);  */
+    /* display: flex;
+    gap: 40px; 
+    padding-left: 2.5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+} */
+.row{
     padding: 2%;
-}
-
-.cardProduits{
+    padding-left: 2%;
+    display: inline-flex;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     display: flex;
-    padding: 1%;
-    max-width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(19, 18, 18, 0.308);
+    gap: 3%;
+    padding-left: 2.5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.leftcard{
+.card{
+    width: 400px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(19, 18, 18, 0.308);
+    position: relative;
+    /* margin-right: 40px; */
+}
+
+.titlecard{
+    color: #22BA00;
+}
+
+.enGras{
+    font-weight: bolder;
+}
+
+.btncard{
+    background-color: #22BA00;
+    color: white;
+    padding: 4%;
+    display: block;
+    margin: 10px;
+    border-radius: 40px;
+    padding-left: 7%;
+    padding-right: 7%;
+    z-index: 100;
+}
+
+.btncard:hover{
+    cursor: pointer;
+    background-color: #22ba0093;
+}
+
+.topcard{
+    height: 70%;
+    padding: 5%;
+    padding-bottom: 0;
+}
+
+.bottomcard{
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
     width: 100%;
 }
 
-.btncardproduits{
-    color: white;
-    background: #22BA00;
-    display: -webkit-box;
-    width: fit-content;
-    padding: 1% 20%;
-    border-radius: 50px;
-}
-
-.titleCardProduitstxt{
-    font-size: 200%;
-    font-weight: bolder;
-}
-
-.addPoducts{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 90%;
-    padding: 5%;
-    border-radius: 20px;
-    box-shadow: 2px 2px 10px #0006;
-}
-
-.titleaddProducts{
-    text-align: center;
-}
-
-.choisirProduit{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 2% 0;
-    border-radius: 50px;
-    box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.185);
-}
-
-.rowaddProducts{
-    display: flex;
-    padding: 5%;
-    /* border: 1px solid black; */
-    border-radius: 50px;
-    justify-content: space-between;
-    box-shadow: 5px 2px 10px rgba(0, 0, 0, 0.404);
-}
-
-.formroupaddProducts{
-    padding: 5%;
-    box-shadow: 2px 5px 16px 0px #0000002f;
-    border-radius: 20px;
-    width: 90%;
-    height: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.titleProduits{
-    color: #22BA00;
-    font-weight: bolder;
-}
-
-.btnPlus{
+.photo{
+    width: 100px;
+    height: 100px;
+    background: white;
     border-radius: 100px;
-    width: 8%;
+}
+
+.photo img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+.boxoneimg{
+    padding: 12px;
+    background: #D9D9D9;
+    border-radius: 100px;
+}
+
+.boxtwoimg{
+    padding: 8px;
+    background: white;
+    border-radius: 100px;
+    margin-left: -20px;
+    margin-bottom: -20px;
+    position: relative;
+}
+
+.borderLeftBoxtwoimg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 100px;
+}
+
+.greencircle{
+    background-color: #2FFF00;
+    border-radius: 50px;
+    height: 25px;
+    width: 25px;
+}
+
+.title{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    background: #22ba00;
+    align-items: first baseline;
 }
 
-.datecontainer{
-    padding: 2%;
+.titlesection{
+    font-size: 300%;
+    margin: 0;
+    border-bottom: 3px solid #2fff00;
+    font-weight: lighter;
 }
 
-.dateaddproducts{
-    text-align: right;
+.spacecol{
+    width: 10px;
 }
 
-.calendrier{
+.btnMove{
+    position: absolute;
+    width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    top: 0;
+    right: 0;
 }
 
-.calendrier input{
-    color: white;
-    background: black;
+
+.precedent .fa, .suivant .fa{
+    font-size: 150%;
+    color: rgba(0, 0, 0, 0.479);
+}
+.precedent .fa:hover, .suivant .fa:hover{
+    color: rgba(0, 0, 0, 0.671);
+}
+
+.suivant:hover{
+    border-right: 1px solid rgba(0, 0, 0, 0.26);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.096);
+    border-top: 1px solid rgba(0, 0, 0, 0.068);
+}
+.precedent:hover{
+    border-left: 1px solid rgba(0, 0, 0, 0.26);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.096);
+    border-top: 1px solid rgba(0, 0, 0, 0.068);
+}
+
+.suivant1:hover{
+    border-right: 1px solid rgba(0, 0, 0, 0.26);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.096);
+    border-top: 1px solid rgba(0, 0, 0, 0.068);
+}
+.precedent1:hover{
+    border-left: 1px solid rgba(0, 0, 0, 0.26);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.096);
+    border-top: 1px solid rgba(0, 0, 0, 0.068);
+}
+
+.precedent1 .fa, .suivant1 .fa{
+    font-size: 150%;
+    color: rgba(0, 0, 0, 0.479);
+}
+.precedent1 .fa:hover, .suivant1 .fa:hover{
+    color: rgba(0, 0, 0, 0.671);
+}
+
+
+/* .fa-arrow-left{
+    position: absolute;
+    left: 0;
+} */
+/* .fa-arrow-right{
+    position: absolute;
+    right: 0;
+} */
+
+.precedent, .suivant{
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
     border: none;
-    padding: 2%;
+    box-shadow: 1px 0 10px #0000001c;
+    z-index: 100;
+    background: #15151508;
+    padding-right: 1%;
+    border: none;
+    backdrop-filter: blur(10px);
 }
 
-.confirmation{
-    text-align: center;
-    margin: 10px auto;
+.suivant{
+    position: absolute;
+    right: 0;
+    padding: 0;
+    padding-left: 1%;
+}
+
+.precedent1, .suivant1{
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border: none;
+    box-shadow: 1px 0 10px #0000001c;
+    z-index: 999;
+    background: #15151508;
+    padding-right: 1%;
+    border: none;
+    backdrop-filter: blur(10px);
+}
+
+.suivant1{
+    position: absolute;
+    right: 0;
+    padding: 0;
+    padding-left: 1%;
+}
+
+.gonext{
+    display: none;
+}
+
+.goprecedent{
     display: block;
-    padding: 2% 5%;
-    color: white;
-    background: #22ba00;
+}
+
+.showMoreAboutSeller{
+    width: 25%;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 35%;
+    z-index: 999;
+    background: white;
+    box-shadow: 0 0 10px 10px #0000005c;
     border-radius: 20px;
-}
-
-.mtb{
-    margin: 5px 0;
-}
-
-.ptb{
     padding: 2%;
+    display: none;
+}
+
+.show-it{
+    display: block !important;
+}
+
+.NOM, .EMAIL, .TEL{
+    height: inherit;
+}
+
+.boxBottomSMAS{
+    width: 60%;
+    font-size: 70%;
+}
+
+.photoProfil{
+    width: 20%;
+    height: 16%;
+    margin: 0 auto;
+}
+
+.photoProfil img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-radius: 50%;
+    border: 5px solid #22ba00;
+}
+
+.identifiant p{
+    text-align: center;
+}
+
+.aboutSeller{
+    font-size: 200%;
+    text-align: center;
+}
+
+.bottomShowMoreAboutSeller{
+    margin: 25% 0 0 0;
+}
+
+.EMAIL{
+    display: flex;
+    align-items: center;
+}
+
+.titleDescription{
+    color: #22ba00;
+}
+
+.close{
+    position: absolute;
+    top: 1%;
+    right: 3%;
+}
+
+@media (max-width) {
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 950px){
+    .row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .first, .last{
+        display: flex;
+    }
+    .first1, .last1{
+        display: flex;
+    }
+
+    .precedent, .suivant, .precedent1, .suivant1{
+        display: none;
+    }
+
+    .showMoreAboutSeller{
+        left: 0;
+        width: 60%;
+    }
+}
+
+@media (max-width: 450px){
+    .row{
+        display: flex;
+        flex-direction: column;
+        gap: 2%;
+    }
+    .showMoreAboutSeller{
+        left: 0;
+        width: 95%;
+    }
+
+    .card{
+        margin-bottom: 10%;
+    }
 }
