@@ -134,44 +134,28 @@ $title = "Produits";
                     <div class="titleaddProducts">
                         AJOUTER DE NOUVEAU PRODUITS
                     </div>
-                    <div class="choisirProduit">
+                    <!-- <div class="choisirProduit">
                         <p>Choisir</p>
                         <i class="fa fa-angle-down"></i>
-                    </div>
-                    <div class="formroupaddProducts">
-                        <div class="rowaddProducts">
-                            <p class="titleProduits">
-                                Tomates
-                            </p>
-                            <div class="btnPlus">
-                                <i class="fa fa-plus"></i>
+                    </div> -->
+                    <form action="" class="myform">
+                        <div class="formroupaddProducts" id="monDiv">
+                            <select name="fruits" id="monSelect">
+                                <option value="Choisir.."></option>
+                                <option value="Tomates">Tomates</option>
+                                <option value="Riz">Riz</option>
+                                <option value="Pommes de Terre">Pommes de Terre</option>
+                            </select>
+                        </div>
+                        <div class="datecontainer">
+                            <h2 class="dateaddproducts mtb">
+                                DEBUT DE LA PLANTATION
+                            </h2>
+                            <div class="calendrier mtb">
+                                <input type="date" name="date_debut" id="" value="<?php echo date('Y-m-d'); ?>">
                             </div>
+                            <input type="submit" class="confirmation" value="Confirmer la plantation">
                         </div>
-                        <div class="rowaddProducts">
-                            <p class="titleProduits">
-                                Tomates
-                            </p>
-                            <div class="btnPlus">
-                                <i class="fa fa-plus"></i>
-                            </div>
-                        </div>
-                        <div class="rowaddProducts">
-                            <p class="titleProduits">
-                                Tomates
-                            </p>
-                            <div class="btnPlus">
-                                <i class="fa fa-plus"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <form action="" method="POST" class="datecontainer">
-                        <h2 class="dateaddproducts mtb">
-                            DEBUT DE LA PLANTATION
-                        </h2>
-                        <div class="calendrier mtb">
-                            <input type="date" name="date_debut" id="" value="<?php echo date('Y-m-d'); ?>">
-                        </div>
-                        <a class="confirmation">Confirmer la plantation</a>
                     </form>
                 </div>
             </div>
@@ -179,6 +163,5 @@ $title = "Produits";
     </div>
 </body>
 <script>
-
 </script>
 </html>
